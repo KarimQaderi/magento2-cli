@@ -3,7 +3,7 @@
 return [
     'askDefault' => [
         'php' => 'php',
-        'dir' => __DIR__ . '/../',
+        'dir' => __DIR__ . '/../../',
         'appendToFirstCode' => '',
     ],
 
