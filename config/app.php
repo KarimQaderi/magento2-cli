@@ -4,7 +4,6 @@ return [
     'askDefault' => [
         'php' => 'php',
         'dir' => __DIR__ . '/../',
-        // 'dir' => '/home/wins/www/magento/2/test tool/',
         'appendToFirstCode' => '',
     ],
 
