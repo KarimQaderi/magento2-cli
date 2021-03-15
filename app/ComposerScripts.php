@@ -23,7 +23,7 @@ class ComposerScripts
 
         $target = $helper->path()->dir('stubs/m2');
 
-        $file = BS . '/../m2';
+        $file = __DIR__ . '/../../m2';
 
         link($target, $file);
 

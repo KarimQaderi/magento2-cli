@@ -1,9 +1,10 @@
 {
-    "name" : "m2/cli",
+    "name": "m2/cli",
     "version": "1.0.0",
     "description": "Magento 2 Cli code",
     "type": "project",
     "require": {
+        "php": ">=7.1",
         "m2/cli-core": "1.0.0"
     },
     "autoload": {
