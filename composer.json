@@ -1,0 +1,27 @@
+{
+    "name" : "m2/cli",
+    "version": "1.0.0",
+    "description": "Magento 2 Cli code",
+    "type": "project",
+    "require": {
+        "m2/cli-core": "1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "M2\\Cli\\App\\": "app"
+        }
+    },
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "M2\\Cli\\App\\ComposerScripts::postAutoloadDump"
+        ]
+    }
+}
