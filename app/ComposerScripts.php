@@ -25,7 +25,7 @@ class ComposerScripts
 
         $file = __DIR__ . '/../../m2';
 
-        link($target, $file);
+        symlink($target, $file);
 
         $helper->alert('stubs m2 add');
 
