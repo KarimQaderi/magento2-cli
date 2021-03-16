@@ -21,7 +21,7 @@ class ComposerScripts
 
         $helper = Helper::getInstance();
 
-        $target = $helper->path()->dir('stubs/m2');
+        $target = __DIR__.'/../m2';
 
         $file = __DIR__ . '/../../m2';
 
