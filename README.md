@@ -1,3 +1,5 @@
+# Install
 composer create-project m2/cli
 
-php m2
+# Use
+`php m2` or `./m2`
