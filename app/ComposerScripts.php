@@ -23,6 +23,10 @@ class ComposerScripts
 
         $target = __DIR__.'/../m2';
 
+        if (file_exists($target)){
+            return;
+        }
+
         $file = __DIR__ . '/../../m2';
 
         symlink($target, $file);

@@ -8,3 +8,4 @@ define('BS', __DIR__);
 require __DIR__ . '/vendor/autoload.php';
 
 (new Index)->run();
+
