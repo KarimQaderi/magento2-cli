@@ -3,15 +3,9 @@
     "version": "1.3",
     "description": "Magento 2 Cli code",
     "type": "project",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/home/wins/Dropbox/tool magento/cli-core"
-        }
-    ],
     "require": {
         "php": ">=7.1",
-        "m2/cli-core": "*"
+        "m2/cli-core": "dev-master"
     },
     "autoload": {
         "psr-4": {
