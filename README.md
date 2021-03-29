@@ -1,5 +1,5 @@
 # Install
-composer global create-project m2/cli
+composer global require m2/cli:dev-master --no-cache
 
 # Use
-`php m2` or `./m2`
+only `m2`

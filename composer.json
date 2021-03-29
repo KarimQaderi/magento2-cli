@@ -2,7 +2,7 @@
     "name": "m2/cli",
     "version": "dev-master",
     "description": "Magento 2 Cli code",
-    "type": "project",
+    "type": "cli-mage-tool",
     "require": {
         "php": ">=7.1"
     },
