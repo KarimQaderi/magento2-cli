@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+use M2\Cli\App\Index;
+
+define('BS', __DIR__.'/../');
+
+if (file_exists(__DIR__.'/../../../autoload.php')) {
+    require __DIR__.'/../../../autoload.php';
+} else {
+    require __DIR__.'/../vendor/autoload.php';
+}
+
+(new Index)->run();
+

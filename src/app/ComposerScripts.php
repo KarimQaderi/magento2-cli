@@ -3,8 +3,8 @@
 namespace M2\Cli\App;
 
 use Composer\Script\Event;
-use M2\CliCore\App\Helper\Helper;
-use M2\CliCore\App\Install;
+use M2\Cli\Helper\Helper;
+use M2\Cli\App\Install;
 
 class ComposerScripts
 {
@@ -20,6 +20,8 @@ class ComposerScripts
         require_once $event->getComposer()->getConfig()->get('vendor-dir') . '/autoload.php';
 
         $helper = Helper::getInstance();
+
+        return;
 
         $target = __DIR__.'/../m2';
 

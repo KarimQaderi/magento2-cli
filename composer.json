@@ -4,14 +4,16 @@
     "description": "Magento 2 Cli code",
     "type": "project",
     "require": {
-        "php": ">=7.1",
-        "m2/cli-core": "dev-master"
+        "php": ">=7.1"
     },
     "autoload": {
         "psr-4": {
-            "M2\\Cli\\App\\": "app"
+            "M2\\Cli\\": "src"
         }
     },
+    "bin": [
+        "bin/m2"
+    ],
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
