@@ -108,8 +108,14 @@ class Config
                         'deps' => [],
                         'callback' => function () {
                             $router = $this->path->stub('router-2.4', true);
+
                             file_put_contents($this->path->magento('router.php'), $router);
-                            Helper::getInstance()->alert('add file router.php');
+
+                            symlink($this->path->magento('pub/static'), $this->path->magento('static'));
+
+                            Helper::getInstance()->alert('symlink pub/static', 'e');
+
+                            Helper::getInstance()->alert('add file router.php', 'e');
                         },
                     ],
 
@@ -119,8 +125,10 @@ class Config
                         'deps' => [],
                         'callback' => function () {
                             $router = $this->path->stub('router-2.2', true);
+
                             file_put_contents($this->path->magento('router.php'), $router);
-                            Helper::getInstance()->alert('add file router.php');
+
+                            Helper::getInstance()->alert('add file router.php', 'e');
                         },
                     ],
                 ]);
