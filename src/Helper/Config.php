@@ -75,7 +75,13 @@ class Config
 
         $this->addMenuDev($items);
 
-        return $items;
+        return array_map(function ($item){
+            if (!isset($item['ask-run'])){
+                $item['ask-run'] = true;
+            }
+
+            return $item;
+        },$items);
     }
 
     protected function addMenuDev(&$items)
@@ -85,6 +91,7 @@ class Config
             'code' => '',
             'map' => '+',
             'deps' => [],
+            'ask-run' => false,
             'callback' => function () {
                 $item = $this->inputIO->menu([
                     'add-config' => [

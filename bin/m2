@@ -5,7 +5,6 @@ use M2\Cli\App\Index;
 
 define('BS', __DIR__ . '/../');
 
-
 foreach (['/../../../autoload.php', '/../../../autoload.php', '/../vendor/autoload.php', '/../autoload.php'] as $vendor) {
     if (file_exists(__DIR__ . $vendor)) {
         require __DIR__ . $vendor;

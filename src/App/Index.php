@@ -52,15 +52,27 @@ class Index
             $this->helper->alertExit('There was a problem');
         }
 
-        $this->helper->alert(implode("\n", $build));
+        $magentoDir = $this->helper->config()->askDefault('dir');
 
-        $ask = $this->inputIO->yesNo('Do you want to run this command?');
+        $this->helper->alert('magento: ' . $magentoDir, 'w');
 
-        if ($ask != 'y') {
-            $this->helper->alertExit('command exit');
+        $buildText = implode("\n", array_map(function ($build) {
+            return trim($build);
+        }, $build));
+
+        $buildText = str_replace($magentoDir, '', $buildText);
+
+        $this->helper->alert($buildText);
+
+        if ($item['ask-run']) {
+            $ask = $this->inputIO->yesNo('Do you want to run this command?');
+
+            if ($ask != 'y') {
+                $this->helper->alertExit('command exit');
+            }
         }
 
-        if (isset($item['callback'])){
+        if (isset($item['callback'])) {
             $item['callback']();
         }
 
