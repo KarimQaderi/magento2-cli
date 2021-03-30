@@ -60,9 +60,9 @@ class Index
             return trim($build);
         }, $build));
 
-        $buildText = str_replace($magentoDir, '', $buildText);
-
-        $this->helper->alert($buildText);
+        $this->helper->alert(
+            str_replace($magentoDir, '', $buildText)
+        );
 
         if ($item['ask-run']) {
             $ask = $this->inputIO->yesNo('Do you want to run this command?');
