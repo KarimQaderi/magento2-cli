@@ -6,6 +6,7 @@ add to file `.bashrc`
 
 `export PATH="$HOME/.composer/vendor/bin:$PATH"`
 
+`source .bashrc`
 
 # Use
 only `m2`
