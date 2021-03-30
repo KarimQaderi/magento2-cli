@@ -15,7 +15,18 @@ class Path
 
     public function cli($path = '')
     {
-        return BS . '/' . $path;
+        return BS . $path;
+    }
+
+    public function stub($file, $fileGetContent = false)
+    {
+        $src = $this->cli('stubs/' . $file . '.stub');
+
+        if (!$fileGetContent) {
+            return $src;
+        }
+
+        return file_get_contents($src);
     }
 
     protected function log($path)

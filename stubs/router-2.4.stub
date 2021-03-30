@@ -1,0 +1,21 @@
+<?php
+
+$requestUri = $_SERVER['REQUEST_URI'];
+
+if (strpos($requestUri, '/static/version') !== false) {
+    $requestUri = explode('/', $requestUri);
+    unset($requestUri[2]);
+    $requestUri = implode('/', $requestUri);
+    header('Location: ' . $requestUri);
+    exit();
+}
+
+if (preg_match('#^/api/rest#', $requestUri)) {
+    $_SERVER["REQUEST_URI"] = 'api.php?type=rest';
+} elseif (preg_match('#^/(pub|skin|js)#', $requestUri)) {
+    return false;
+} elseif (file_exists('.' . $requestUri)) {
+    return false;
+} else {
+    include_once 'index.php';
+}

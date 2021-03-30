@@ -97,6 +97,30 @@ class Config
                             $content = file_get_contents($srcConfig);
 
                             file_put_contents($this->path->magento('m2-config.php'), $content);
+
+                            Helper::getInstance()->alert('add file m2-config.php');
+                        },
+                    ],
+
+                    'add-router-2-4' => [
+                        'title' => 'router > 2.4',
+                        'code' => '',
+                        'deps' => [],
+                        'callback' => function () {
+                            $router = $this->path->stub('router-2.4', true);
+                            file_put_contents($this->path->magento('router.php'), $router);
+                            Helper::getInstance()->alert('add file router.php');
+                        },
+                    ],
+
+                    'add-router-2-2' => [
+                        'title' => 'router < 2.2',
+                        'code' => '',
+                        'deps' => [],
+                        'callback' => function () {
+                            $router = $this->path->stub('router-2.2', true);
+                            file_put_contents($this->path->magento('router.php'), $router);
+                            Helper::getInstance()->alert('add file router.php');
                         },
                     ],
                 ]);
