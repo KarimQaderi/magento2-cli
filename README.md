@@ -13,10 +13,12 @@ only `m2`
 
 
 # Install project
-composer remove m2/cli
+composer remove m2/cli --no-update
 composer require m2/cli:dev-master --no-cache
 
 ln -s vendor/m2/cli/bin/m2 m2
 
 # Use
 only `./m2`
+
+

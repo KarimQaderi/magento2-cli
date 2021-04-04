@@ -97,7 +97,13 @@ class Index
 
         if (isset($command['deps']) && is_array($command['deps'])) {
             foreach ($command['deps'] as $depCode) {
-                $codes[] = $this->buildCommand($depCode, true);
+                $re = $this->buildCommand($depCode, true);
+
+                if (is_array($re)) {
+                    $codes = array_merge($codes, $re);
+                } else {
+                    $codes[] = $this->buildCommand($depCode, true);
+                }
             }
         }
 
@@ -115,9 +121,9 @@ class Index
                 $code = str_replace('{' . $key . '}', $val, $code);
             }
 
-            if ($isDep) {
-                return $code;
-            }
+            array_unshift($codes, $code);
+
+            return $codes;
         }
 
         if ($isDep) {
