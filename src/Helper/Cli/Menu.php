@@ -128,9 +128,13 @@ class Menu
         return '';
     }
 
-    public function run()
+    public function run($controlMapping = null)
     {
         $this->addControlMapping();
+
+        if (!empty($controlMapping) && isset($this->controlMapping[$controlMapping])){
+            return $this->controlMapping[$controlMapping];
+        }
 
         $this->top();
 

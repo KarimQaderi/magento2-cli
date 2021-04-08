@@ -46,9 +46,9 @@ class InputIO
         return '';
     }
 
-    public function menu(array $list)
+    public function menu(array $list, $controlMapping = null)
     {
-        $select = (new Menu($list))->run();
+        $select = (new Menu($list))->run($controlMapping);
 
         return $select;
     }

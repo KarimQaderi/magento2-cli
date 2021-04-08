@@ -40,7 +40,13 @@ class Index
     {
         $list = $this->commandAll;
 
-        $item = $this->inputIO->menu($list);
+        $controlMapping = null;
+
+        if (isset($_SERVER['argv']) && count($_SERVER['argv']) == 2) {
+            $controlMapping = $_SERVER['argv'][1];
+        }
+
+        $item = $this->inputIO->menu($list, $controlMapping);
 
         if (!isset($item['key'])) {
             $this->helper->alertExit('command not found');
