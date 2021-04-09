@@ -1,6 +1,6 @@
 {
     "name": "m2/cli",
-    "version": "dev-master",
+    "version": "1.0",
     "description": "Magento 2 Cli code",
     "type": "cli-mage-tool",
     "require": {
