@@ -1,5 +1,6 @@
 # Install global
 composer global remove m2/cli
+
 composer global require m2/cli:dev-master --no-cache
 
 add to file `.bashrc`

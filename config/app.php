@@ -13,7 +13,7 @@ return [
     'command' => [
         'php-s' => [
             'title' => 'php -S 127.0.0.1:3554',
-            'code' => 'php -S 127.0.0.1:3554 router.php',
+            'code' => 'php -S 127.0.0.1:3554 phpserver/router.php',
             'deps' => [],
         ],
     ],

@@ -25,7 +25,7 @@ return [
         'ask' => [
             'more' => [
                 'title' => 'More Append Data Ex: fa_IR',
-                'default' => '',
+                'default' => 'fa_IR en_US',
             ],
         ],
     ],
