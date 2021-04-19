@@ -99,4 +99,9 @@ return [
             ],
         ],
     ],
+
+    'm11-debug' => [
+        'title' => 'debug',
+        'code' => ' echo "https://devdocs.magento.com/guides/v2.4/config-guide/cli/logging.html"',
+    ],
 ];
