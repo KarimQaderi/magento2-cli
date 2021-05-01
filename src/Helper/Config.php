@@ -69,19 +69,17 @@ class Config
 
     public function commandAll()
     {
-        $items = [];
-
-        $items = array_merge($items, $this->commandDefault(), $this->command());
+        $items = call_user_func_array('array_replace_recursive', [$this->commandDefault(), $this->command()]);
 
         $this->addMenuDev($items);
 
-        return array_map(function ($item){
-            if (!isset($item['ask-run'])){
+        return array_map(function ($item) {
+            if (!isset($item['ask-run'])) {
                 $item['ask-run'] = true;
             }
 
             return $item;
-        },$items);
+        }, $items);
     }
 
     protected function addMenuDev(&$items)
