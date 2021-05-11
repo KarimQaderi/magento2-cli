@@ -15,7 +15,13 @@ return [
 
     'm11' => [
         'title' => 'force deploy -f',
-        'code' => 'rm -rf "{dir}pub/static" && rm -rf "{dir}var/cache" && rm -rf "{dir}var/view_preprocessed"',
+        'code' => implode(' && ',[
+            'rm -rf "{dir}pub/static/adminhtml"',
+            'rm -rf "{dir}pub/static/frontend"',
+            'rm -rf "{dir}pub/static/_cache"',
+            'rm -rf "{dir}var/cache"',
+            'rm -rf "{dir}var/view_preprocessed"'
+        ]),
         'deps' => ['m2'],
     ],
 

@@ -2,8 +2,8 @@
 
 return [
     'askDefault' => [
-        'php' => 'php',
-        'dir' => getcwd() . '/',
+        'php' => 'php', // Ex: php7.2  | /usr/bin/php7.2
+        'dir' => getcwd() . '/', // dir base magento
         'firstCode' => '',
     ],
 
