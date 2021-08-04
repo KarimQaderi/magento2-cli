@@ -15,7 +15,7 @@ return [
 
     'm11' => [
         'title' => 'force deploy -f',
-        'code' => implode(' && ',[
+        'code' => implode(' && ', [
             'rm -rf "{dir}pub/static/adminhtml"',
             'rm -rf "{dir}pub/static/frontend"',
             'rm -rf "{dir}pub/static/_cache"',
@@ -63,7 +63,7 @@ return [
 
     'm8' => [
         'title' => 'reindex',
-        'code' => $magentoCode . 'indexer:reindex',
+        'code' => $magentoCode . 'indexer:reset && ' . $magentoCode . 'indexer:reindex',
     ],
 
     'm9' => [
