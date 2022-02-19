@@ -63,7 +63,8 @@ return [
 
     'm8' => [
         'title' => 'reindex',
-        'code' => $magentoCode . 'indexer:reset && ' . $magentoCode . 'indexer:reindex',
+        'code' => $magentoCode . 'indexer:reindex',
+//        'code' => $magentoCode . 'indexer:reset && ' . $magentoCode . 'indexer:reindex',
     ],
 
     'm9' => [
